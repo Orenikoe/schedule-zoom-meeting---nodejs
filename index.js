@@ -15,7 +15,7 @@ const payload = {
     iss: config.APIKey,
     exp: ((new Date()).getTime() + 5000)
 };
-const token = jwt.sign(payload, config.APISecret);
+const token = jwt.sign(payload, process.env.API_SECRET);
 
 
 //get the form 
